@@ -74,8 +74,8 @@ curl -X POST http://localhost:8080/api/chat \
 
 - **Vector Database**: PGVector (PostgreSQL with vector extension)
   - Database: vectordb
-  - Username: testuser
-  - Password: testpwd
+  - Username: postgres
+  - Password: postgres
   - Port: 5432
 
 - **LLM Configuration**:
@@ -95,7 +95,6 @@ curl -X POST http://localhost:8080/api/chat \
 - `ChatController`: Handles REST API requests
 - `DocumentIngestionService`: Processes and stores documentation
 - `application.properties`: Contains configuration for Ollama and PGVector
-- `compose.yml`: Docker composition for PGVector database
 
 ## Troubleshooting
 
@@ -106,8 +105,7 @@ curl -X POST http://localhost:8080/api/chat \
 
 ## Dependencies
 
-- Spring Boot 3.4.3
-- Spring AI (version 1.0.0-M6)
+- Spring Boot 3.5.11
+- Spring AI (version 1.1.2)
 - PGVector
 - Apache Tika
-- Spring Boot Docker Compose Support
