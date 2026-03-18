@@ -1,13 +1,13 @@
 # Spring AI RAG Tutorial with Ollama and PGVector
 
-This project demonstrates the implementation of Retrieval Augmented Generation (RAG) using Spring AI, Ollama, and PGVector Database. The application serves as a personal assistant that can answer questions about Spring Boot by referencing the Spring Boot Reference Documentation PDF.
+This project demonstrates the implementation of Retrieval Augmented Generation (RAG) using Spring AI, Ollama, and PGVector Database. The application serves as a personal assistant that can answer questions about a topic by referencing the respective PDF
 
 ## Features
 
 - Uses Spring AI for RAG implementation
 - Integrates with Ollama for LLM capabilities
 - Stores and retrieves vector embeddings using PGVector
-- Automatically processes and ingests Spring Boot documentation
+- Automatically processes and ingests documents
 - Provides REST API for question-answering
 
 ## Architecture
@@ -21,7 +21,6 @@ This project demonstrates the implementation of Retrieval Augmented Generation (
 ## Prerequisites
 
 - Java 21
-- Docker and Docker Compose
 - Ollama installed locally
 - Maven
 
@@ -74,8 +73,8 @@ curl -X POST http://localhost:8080/api/chat \
 
 - **Vector Database**: PGVector (PostgreSQL with vector extension)
   - Database: vectordb
-  - Username: testuser
-  - Password: testpwd
+  - Username: postgres
+  - Password: postgres
   - Port: 5432
 
 - **LLM Configuration**:
@@ -95,7 +94,6 @@ curl -X POST http://localhost:8080/api/chat \
 - `ChatController`: Handles REST API requests
 - `DocumentIngestionService`: Processes and stores documentation
 - `application.properties`: Contains configuration for Ollama and PGVector
-- `compose.yml`: Docker composition for PGVector database
 
 ## Troubleshooting
 
@@ -106,8 +104,7 @@ curl -X POST http://localhost:8080/api/chat \
 
 ## Dependencies
 
-- Spring Boot 3.4.3
-- Spring AI (version 1.0.0-M6)
+- Spring Boot 3.5.11
+- Spring AI (version 1.1.2)
 - PGVector
 - Apache Tika
-- Spring Boot Docker Compose Support
