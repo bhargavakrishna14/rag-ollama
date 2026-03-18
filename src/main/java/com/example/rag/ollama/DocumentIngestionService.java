@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 public class DocumentIngestionService implements CommandLineRunner {
 
     private static final Logger log = LoggerFactory.getLogger(DocumentIngestionService.class);
-    @Value("classpath:/pdf/spring-boot-reference.pdf")
+    @Value("classpath:/pdf/XAgent into L3AGI.pdf")
     private Resource resource;
     private final VectorStore vectorStore;
 
